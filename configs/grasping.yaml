@@ -1,0 +1,36 @@
+env:
+  env_name: grasping
+  num_samples: 1000
+  num_test_samples: 50
+  #train
+  train_range_rotation: [0,0.6]
+  train_range_translation: [0,0.5]
+  train_range_scale: [0.7,1.3]
+  #test
+  test_range_rotation: [0.6,1]
+  test_range_translation: [0.5,0.7]
+  test_range_scale: [1.3,1.6]
+  single_transformation: false #if false each sample will undergo 3 transformations, if true randomly choose 1 transformation each time
+  #
+  n_PCA_comp: 3
+  mesh_noise: 0.005
+  grasp_noise: 0.002
+  output_size: 3 #[x,y,z] grasping point
+  obs_idxs: [0,1,2,3,4,5,6,7,8,9,10,11] #mean [x,y,z], n_PCA_comp(=3) PCA components
+  type_idxs: [12,13,14] #priviledged train info, one-hot with rotation type or object type
+  plot_idxs: null #should plot output, not anything from input
+  goal_idxs: null
+  post_process: false
+  post_process_idxs: null
+  sample_size: 1024 #for pointcloud baselines, sample pointpp_sample_size points from mesh to run on
+  seed: 0
+
+model:
+  hidden_layer_size: 32
+  hidden_depth: 2
+  feature_dim: 32
+  batch_size: 32
+  num_epochs: 5000
+  use_gt_weights_train: true #if state has type_idxs one-hot at end and want to use in training
+  use_gt_weights_eval: false
+  transducer_mode: delta_supervised

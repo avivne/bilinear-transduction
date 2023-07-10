@@ -1,0 +1,26 @@
+env:
+  env_name: slider
+  num_trajs: 100
+  num_test_trajs: 50  
+  horizon: 200
+  #in dist
+  train_range_goal_low: 60.
+  train_range_goal_high: 130.
+  #ood
+  test_range_goal_low: 5.
+  test_range_goal_high: 15.
+  #
+  obs_idxs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  plot_idxs: [2] #object
+  goal_idxs: [17] #mass
+  post_process: false
+  post_process_idxs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  seed: 0
+
+model:  
+  hidden_layer_size: 32
+  hidden_depth: 1
+  feature_dim: 32
+  batch_size: 32
+  num_epochs: 5000
+  transducer_mode: delta

@@ -1,0 +1,27 @@
+env:
+  env_name: adroit
+  num_trajs: 100
+  num_test_trajs: 50  
+  horizon: 200
+  #in dist 
+  train_range_goal_low: [0., 0., 0.15]
+  train_range_goal_high: [0.3, 0.3, 0.35]
+  train_range_start: null
+  #ood
+  test_range_goal_low: [-0.3, -0.3, 0.15]
+  test_range_goal_high: [0., 0., 0.35]
+  test_range_start: null
+  obs_idxs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+  plot_idxs: [-9,-8,-7] #object
+  goal_idxs: [-3,-2,-1] #target
+  post_process: false
+  post_process_idxs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38]
+  seed: 0
+
+model:  
+  hidden_layer_size: 512
+  hidden_depth: 1
+  feature_dim: 32
+  batch_size: 32
+  num_epochs: 5000
+  transducer_mode: delta
