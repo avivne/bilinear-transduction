@@ -35,7 +35,7 @@ Rendering sample videos of expert demonstrations and model performance on in-dis
   ```
   python render_videos.py
   ```
-modify lines 92-98 to render selected environments, models and data points.
+modify [this block](https://github.com/avivne/bilinear-transduction/blob/6ab1952cf2471b8fe23387ee1b38abc6bbdd417b/render_videos.py#L92) to render selected environments, models and data points.
 
 
 ## Cite
