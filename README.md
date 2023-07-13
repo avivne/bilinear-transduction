@@ -31,7 +31,7 @@ Add `--model-type bc` for training and evaluating the neural net baseline on any
 
 
 ## Render Videos
-Rendering sample videos of expert demonstrations and model performance on in-distirbution and OOS data points
+Rendering sample videos of expert demonstrations and model performance on in-distribution and OOS data points
   ```
   python render_videos.py
   ```
